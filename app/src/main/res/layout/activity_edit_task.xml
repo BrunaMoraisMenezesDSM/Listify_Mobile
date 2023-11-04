@@ -1,45 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#D2C7FF"
     tools:context=".EditTaskActivity">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#D2C7FF">
+
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nome"
+                android:layout_marginStart="6dp"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#FFA500" />
+
             <EditText
                 android:id="@+id/txtName"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"></EditText>
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descrição"
+                android:layout_marginStart="6dp"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#FFA500" />
+
             <EditText
                 android:id="@+id/txtDescription"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"></EditText>
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prioridade"
+                android:layout_marginStart="6dp"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#FFA500" />
+
             <Spinner
                 android:id="@+id/spinnerPriority"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"></Spinner>
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data limite"
+                android:layout_marginStart="6dp"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#FFA500" />
+
             <CalendarView
                 android:id="@+id/cvDateLimit"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"></CalendarView>
+                android:layout_height="wrap_content"
+                android:background="#A591EF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:layout_marginStart="6dp"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#FFA500" />
+
             <Spinner
                 android:id="@+id/spinnerStatus"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"></Spinner>
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
+
             <Button
                 android:id="@+id/btnSave"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Salvar"></Button>
+                android:text="Salvar"
+                android:layout_gravity="center" />
         </LinearLayout>
     </ScrollView>
-
 </androidx.appcompat.widget.LinearLayoutCompat>

@@ -36,15 +36,9 @@ class AdapterTasks(var context: Context, var listTasks: List<Task>) : RecyclerVi
         val task: Task = listTasks.elementAt(position)
         val txtName: TextView = holder.itemView.findViewById(R.id.txtName)
         val txtDescription: TextView = holder.itemView.findViewById(R.id.txtDescription)
-        val txtPriority: TextView = holder.itemView.findViewById(R.id.txtPriority)
-        val txtSelected: TextView = holder.itemView.findViewById(R.id.selectedDateLimit)
-        val txtStatus: TextView = holder.itemView.findViewById(R.id.txtStatus)
 
         txtName.text = task.name
         txtDescription.text = task.description
-        txtPriority.text = task.priority
-        txtSelected.text = task.dateLimit
-        txtStatus.text = task.status
 
         holder.itemView.setOnLongClickListener { v ->
             clickedPosition = holder.adapterPosition
