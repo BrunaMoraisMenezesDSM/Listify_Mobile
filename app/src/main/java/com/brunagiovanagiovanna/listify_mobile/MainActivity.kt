@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
 
         var retrofitCli: RetrofitClient = RetrofitClient()
-        retrofitCli.taskService.getAllTasks().enqueue(
+        retrofitCli.taskService.getTaskPending().enqueue(
             object: Callback<List<Task>> {
                 override fun onResponse(
                     call: Call<List<Task>>,
@@ -140,7 +140,7 @@ class MainActivity : AppCompatActivity() {
             "Em andamento" -> service.getTaskInProgress()
             "Concluído" -> service.getTaskCompleted()
             "Todos" -> service.getAllTasks()
-            else -> service.getAllTasks()
+            else -> service.getTaskPending()
         }
 
         call.enqueue(object : Callback<List<Task>> {
@@ -157,7 +157,8 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<List<Task>>, t: Throwable) {
-                Log.e("API", "Falha ao carregar tarefas com status $status", t)
+                recyclerTasks.adapter = null
+                Toast.makeText(this@MainActivity, "Nenhuma tarefa '$status' encontrada", Toast.LENGTH_LONG).show()
             }
         })
     }

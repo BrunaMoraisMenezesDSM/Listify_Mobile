@@ -16,6 +16,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class EditTaskActivity : AppCompatActivity() {
+    var data:Date? = null
     var task: Task? = null
     lateinit var btnSave: Button
     lateinit var txtName: TextView
@@ -41,6 +42,12 @@ class EditTaskActivity : AppCompatActivity() {
         spinnerPriority = findViewById(R.id.spinnerPriority)
         cvDateLimit = findViewById(R.id.cvDateLimit)
         spinnerStatus = findViewById(R.id.spinnerStatus)
+
+        cvDateLimit.setOnDateChangeListener { calendarView: CalendarView, year: Int, month: Int, day: Int ->
+            run {
+                data = Date(year - 1900, month, day)
+            }
+        }
 
         spinnerStatus.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, statusArray)
         spinnerPriority.adapter = ArrayAdapter(this,  android.R.layout.simple_spinner_dropdown_item, priorityArray)
@@ -101,9 +108,9 @@ class EditTaskActivity : AppCompatActivity() {
     private fun newTask() {
         if (!txtName.text.toString().isNullOrEmpty())
         {
-            val dateLimitMillis = cvDateLimit.date
+            val dateLimitMillis = data?.time
             val sdf = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
-            val formattedDate = sdf.format(Date(dateLimitMillis))
+            val formattedDate = sdf.format(dateLimitMillis?.let { Date(it) })
             val status = fetchSelectedStatus()
             val priority = fetchSelectedPriority()
 
@@ -162,9 +169,9 @@ class EditTaskActivity : AppCompatActivity() {
 
     private fun updateTask() {
         if (!txtName.text.toString().isNullOrEmpty()) {
-            val dateLimitMillis = cvDateLimit.date
+            val dateLimitMillis = data?.time
             val sdf = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
-            val formattedDate = sdf.format(Date(dateLimitMillis))
+            val formattedDate = sdf.format(dateLimitMillis?.let { Date(it) })
 
             val taskId = task?._id ?: ""
             val status = fetchSelectedStatus()
