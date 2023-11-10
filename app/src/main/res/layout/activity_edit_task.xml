@@ -23,10 +23,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nome"
+                android:textColor="#1d0033"
                 android:layout_marginStart="6dp"
                 android:textSize="22sp"
-                android:textStyle="bold"
-                android:textColor="#FFA500" />
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/txtName"
@@ -41,7 +41,7 @@
                 android:layout_marginStart="6dp"
                 android:textSize="22sp"
                 android:textStyle="bold"
-                android:textColor="#FFA500" />
+                android:textColor="#1d0033" />
 
             <EditText
                 android:id="@+id/txtDescription"
@@ -56,13 +56,15 @@
                 android:layout_marginStart="6dp"
                 android:textSize="22sp"
                 android:textStyle="bold"
-                android:textColor="#FFA500" />
+                android:textColor="#1d0033" />
 
             <Spinner
                 android:id="@+id/spinnerPriority"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:theme="@style/SpinnerPersonalidado"
+                android:textAlignment="gravity"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -71,13 +73,13 @@
                 android:layout_marginStart="6dp"
                 android:textSize="22sp"
                 android:textStyle="bold"
-                android:textColor="#FFA500" />
+                android:textColor="#1d0033" />
 
             <CalendarView
                 android:id="@+id/cvDateLimit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#A591EF" />
+                android:background="#A593E5" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -86,20 +88,23 @@
                 android:layout_marginStart="6dp"
                 android:textSize="22sp"
                 android:textStyle="bold"
-                android:textColor="#FFA500" />
+                android:textColor="#1d0033" />
 
             <Spinner
                 android:id="@+id/spinnerStatus"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:theme="@style/SpinnerPersonalidado"
+                android:textAlignment="gravity"/>
 
             <Button
                 android:id="@+id/btnSave"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Salvar"
-                android:layout_gravity="center" />
+                android:layout_gravity="center"
+                android:backgroundTint="#FFA500"
+                android:text="Salvar"/>
         </LinearLayout>
     </ScrollView>
 </androidx.appcompat.widget.LinearLayoutCompat>
