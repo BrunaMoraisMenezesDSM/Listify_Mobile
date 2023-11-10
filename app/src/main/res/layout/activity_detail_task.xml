@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#D2C7FF"
+    tools:context=".DetailTaskActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#D2C7FF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="start|center_vertical"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:id="@+id/txtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:textAlignment="center"
+                    android:textColor="#291055"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginTop="30dp"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Descrição"
+                    android:textColor="#1d0033"
+                    android:textSize="23sp"
+                    android:textStyle='bold' />
+
+                <TextView
+                    android:id="@+id/txtDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="61dp"
+                    android:textAlignment="textStart"
+                    android:textSize="25sp"
+                    android:textColor="#555454"
+                    android:layout_marginBottom="30dp"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="start|center_vertical"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Prioridade"
+                    android:textColor="#1d0033"
+                    android:textSize="23sp"
+                    android:textStyle='bold' />
+
+                <TextView
+                    android:id="@+id/txtPriority"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:textAlignment="textStart"
+                    android:textSize="25sp"
+                    android:textColor="#555454"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="start|center_vertical"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Data limite"
+                    android:textColor="#1d0033"
+                    android:textSize="23sp"
+                    android:textStyle='bold' />
+
+                <TextView
+                    android:id="@+id/txtSelected"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textAlignment="textStart"
+                    android:textSize="25sp"
+                    android:textColor="#555454"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="start|center_vertical"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Status"
+                    android:textColor="#1d0033"
+                    android:textSize="23sp"
+                    android:textStyle='bold' />
+
+                <TextView
+                    android:id="@+id/txtStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:textAlignment="textStart"
+                    android:textSize="25sp"
+                    android:textColor="#555454"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.appcompat.widget.LinearLayoutCompat>
