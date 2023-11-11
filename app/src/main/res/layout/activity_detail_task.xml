@@ -24,7 +24,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="start|center_vertical"
-                android:layout_marginStart="16dp">
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="40dp">
 
                 <TextView
                     android:id="@+id/txtName"
@@ -34,7 +35,7 @@
                     android:textColor="#291055"
                     android:textSize="32sp"
                     android:textStyle="bold"
-                    android:layout_marginBottom="30dp"
+                    android:layout_marginBottom="60dp"
                     android:layout_marginTop="30dp"></TextView>
 
                 <TextView
@@ -42,7 +43,7 @@
                     android:layout_height="wrap_content"
                     android:text="Descrição"
                     android:textColor="#1d0033"
-                    android:textSize="23sp"
+                    android:textSize="25sp"
                     android:textStyle='bold' />
 
                 <TextView
@@ -69,7 +70,7 @@
                     android:layout_height="wrap_content"
                     android:text="Prioridade"
                     android:textColor="#1d0033"
-                    android:textSize="23sp"
+                    android:textSize="25sp"
                     android:textStyle='bold' />
 
                 <TextView
@@ -95,7 +96,7 @@
                     android:layout_height="wrap_content"
                     android:text="Data limite"
                     android:textColor="#1d0033"
-                    android:textSize="23sp"
+                    android:textSize="25sp"
                     android:textStyle='bold' />
 
                 <TextView
@@ -120,7 +121,7 @@
                     android:layout_height="wrap_content"
                     android:text="Status"
                     android:textColor="#1d0033"
-                    android:textSize="23sp"
+                    android:textSize="25sp"
                     android:textStyle='bold' />
 
                 <TextView

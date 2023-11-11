@@ -16,7 +16,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class EditTaskActivity : AppCompatActivity() {
-    var data:Date? = null
+    var data: Date = Date()
     var task: Task? = null
     lateinit var btnSave: Button
     lateinit var txtName: TextView
